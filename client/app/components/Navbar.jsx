@@ -36,7 +36,7 @@ class MyNav extends React.Component {
             {this.props.loggedIn ? (
               <LinkContainer to={{ pathname: '/logout'}}><NavItem eventKey={1} href="#">Welcome {username}! | Logout</NavItem></LinkContainer>
             ) : (
-              <LinkContainer to={{ pathname: '/signin'}}><NavItem eventKey={1} href="#">Sign in</NavItem></LinkContainer>
+              <LinkContainer to={{ pathname: '/login'}}><NavItem eventKey={1} href="#">Sign in</NavItem></LinkContainer>
             )}
           </Nav>
         </Navbar.Collapse>

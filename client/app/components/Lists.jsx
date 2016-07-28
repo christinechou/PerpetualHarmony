@@ -24,15 +24,15 @@ class ListOfEatUp extends React.Component {
   }
 
   rsvpToEatUp(index,props) {
-    var eatupToCreate = index;
+    var eatupToAdd = index;
 
     console.log('this.state.autocomplete',this.state.autocomplete, 'this.props:',this.props) //this.props produces all eatups. access them by using index
 
     $.ajax({
       type:'POST',
       url: 'http://localhost:3000/api/eatup/:id/rsvp',  //TO CHANGE
-      data: JSON.stringify({userId: eatupToCreate.creatorId}),   //TO CHANGE
-                            // sessionId: eatupToCreate.id}),   TO CHANGE
+      data: JSON.stringify({userId: eatupToAdd.creatorId,   //TO CHANGE
+                            sessionId: eatupToAdd.id}), 
       contentType: 'application/json',
       success: (data) => {
         // console.log('Successfully created ',data);
@@ -54,7 +54,7 @@ class ListOfEatUp extends React.Component {
           <p>Hosted by: {result.User.username}</p>
           <Button bsStyle="success" bsSize="xs" onClick={this.handleSearch.bind(this, result)}>Get Details</Button>
           <Button className="rsvpButton" bsStyle="success" bsSize="sm" key={index}
-          onClick= { this.rsvpToEatUp.bind(this, index, this.props) }>RSVP</Button>
+          onClick= { this.rsvpToEatUp.bind(this, index, this.props) }>Join!</Button>
         </div>
       </div>
       )

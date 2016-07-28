@@ -16,7 +16,7 @@ module.exports = {
       url: 'http://localhost:3000/users/signUp',
       data: JSON.stringify({
         username: username,
-        password: pass
+        password: password
       }),
       contentType: 'application/json',
       success: (dbuser) => {

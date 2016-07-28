@@ -3,7 +3,7 @@ import auth from '../auth'
 import { Link } from 'react-router';
 import MyNav from './Navbar.jsx';
 import Home from './Home.jsx';
-// import auth from '../auth'
+
 
 
 

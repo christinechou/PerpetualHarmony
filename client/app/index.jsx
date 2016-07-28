@@ -6,8 +6,8 @@ import App from './components/App.jsx';
 import Loading from './components/Loading.jsx';
 import Home from './components/Home.jsx';
 import EatupDetails from './components/EatupDetails.jsx';
-import SignIn from './components/SignIn.jsx';
 import SignUp from './components/SignUp.jsx';
+import SignIn from './components/SignIn.jsx';
 import Logout from './components/Logout.jsx';
 import auth from './auth'
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <Route path="home" component={Home} onEnter={requireAuth} />
         <Route path="home/:eatupdetails" component={EatupDetails} />
         <Route path="logout" component={Logout} />
-      <Route path="/*" component={SignIn} />
+        <Route path="signup" component={SignUp} />
       </div>
   </Router>
   ), document.getElementById('app'));
